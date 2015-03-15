@@ -195,6 +195,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+#TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/rootdir/etc/prebuilt_file_contexts:recovery/root/prebuilt_file_contexts
+
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface \
