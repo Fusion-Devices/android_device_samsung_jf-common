@@ -44,7 +44,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/jf
 # Fusion Optimizations
 FUSION_OPT := true
 FUSION_O3 := true
-FUSION_STRICT := true
+FUSION_STRICT := false
 FUSION_KRAIT := true
 FUSION_GRAPHITE := true
 FUSION_PIPE := true
