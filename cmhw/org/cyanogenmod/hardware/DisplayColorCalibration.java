@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2014 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 package org.cyanogenmod.hardware;
 
-import java.io.File;
-import java.util.Scanner;
 import org.cyanogenmod.hardware.util.FileUtils;
 
+import java.io.File;
+
 public class DisplayColorCalibration {
-    private static final String COLOR_FILE = "/sys/class/graphics/fb0/rgb";
+    private static final String COLOR_FILE = "/sys/class/misc/gammacontrol/tuner";
 
     public static boolean isSupported() {
         File f = new File(COLOR_FILE);
@@ -29,15 +29,15 @@ public class DisplayColorCalibration {
     }
 
     public static int getMaxValue()  {
-        return 32768;
+        return 120;
     }
 
     public static int getMinValue()  {
-        return 255;
+        return 0;
     }
 
     public static int getDefValue() {
-        return getMaxValue();
+        return 60;
     }
 
     public static String getCurColors()  {
@@ -48,3 +48,4 @@ public class DisplayColorCalibration {
         return FileUtils.writeLine(COLOR_FILE, colors);
     }
 }
+

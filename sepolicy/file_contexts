@@ -26,6 +26,3 @@
 
 /system/bin/macloader								u:object_r:macloader_exec:s0
 
-# Display
-/sys/devices/virtual/graphics/fb0/rgb						u:object_r:sysfs_display:s0
-
